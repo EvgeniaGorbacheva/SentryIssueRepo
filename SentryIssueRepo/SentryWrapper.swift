@@ -1,5 +1,5 @@
 //
-//  SentryIssueRepo.swift
+//  SentryWrapper.swift
 //  SentryIssueRepo
 //
 //  Created by Evgenia Gorbacheva on 29/07/2024.
@@ -7,7 +7,7 @@
 
 import Sentry
 
-public class SentryIssueRepo {
+public class SentryWrapper {
 
     public init() {
         let sentryOptions = Options()
@@ -30,3 +30,4 @@ public class SentryIssueRepo {
         SentrySDK.start(options: sentryOptions)
     }
 }
+

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49C408082C579830005CB90B /* SentryIssueRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C408072C579830005CB90B /* SentryIssueRepo.swift */; };
+		49C4080F2C57A018005CB90B /* SentryWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C4080E2C57A017005CB90B /* SentryWrapper.swift */; };
+		49C408112C57A42B005CB90B /* SentryWrapper.swift in Headers */ = {isa = PBXBuildFile; fileRef = 49C4080E2C57A017005CB90B /* SentryWrapper.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		9001F1DBF5F406EB2053FB0D /* Pods_SentryIssueRepo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB999C375163EAE0148C3D4 /* Pods_SentryIssueRepo.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,7 @@
 /* Begin PBXFileReference section */
 		2813B832253C13B82FAB861A /* Pods-SentryIssueRepo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentryIssueRepo.debug.xcconfig"; path = "Target Support Files/Pods-SentryIssueRepo/Pods-SentryIssueRepo.debug.xcconfig"; sourceTree = "<group>"; };
 		49C408042C579830005CB90B /* libSentryIssueRepo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSentryIssueRepo.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		49C408072C579830005CB90B /* SentryIssueRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentryIssueRepo.swift; sourceTree = "<group>"; };
+		49C4080E2C57A017005CB90B /* SentryWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentryWrapper.swift; sourceTree = "<group>"; };
 		C51A9D80952C11BCA87E6CFC /* Pods-SentryIssueRepo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentryIssueRepo.release.xcconfig"; path = "Target Support Files/Pods-SentryIssueRepo/Pods-SentryIssueRepo.release.xcconfig"; sourceTree = "<group>"; };
 		DEB999C375163EAE0148C3D4 /* Pods_SentryIssueRepo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentryIssueRepo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,7 +65,7 @@
 		49C408062C579830005CB90B /* SentryIssueRepo */ = {
 			isa = PBXGroup;
 			children = (
-				49C408072C579830005CB90B /* SentryIssueRepo.swift */,
+				49C4080E2C57A017005CB90B /* SentryWrapper.swift */,
 			);
 			path = SentryIssueRepo;
 			sourceTree = "<group>";
@@ -83,11 +84,21 @@
 				2813B832253C13B82FAB861A /* Pods-SentryIssueRepo.debug.xcconfig */,
 				C51A9D80952C11BCA87E6CFC /* Pods-SentryIssueRepo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		49C408102C57A3B9005CB90B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49C408112C57A42B005CB90B /* SentryWrapper.swift in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		49C408032C579830005CB90B /* SentryIssueRepo */ = {
@@ -95,6 +106,7 @@
 			buildConfigurationList = 49C4080B2C579830005CB90B /* Build configuration list for PBXNativeTarget "SentryIssueRepo" */;
 			buildPhases = (
 				D455E7827FF5223A11AB1A6F /* [CP] Check Pods Manifest.lock */,
+				49C408102C57A3B9005CB90B /* Headers */,
 				49C408002C579830005CB90B /* Sources */,
 				49C408012C579830005CB90B /* Frameworks */,
 				49C408022C579830005CB90B /* CopyFiles */,
@@ -171,7 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49C408082C579830005CB90B /* SentryIssueRepo.swift in Sources */,
+				49C4080F2C57A018005CB90B /* SentryWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +242,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -287,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -302,7 +314,10 @@
 			baseConfigurationReference = 2813B832253C13B82FAB861A /* Pods-SentryIssueRepo.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -315,7 +330,10 @@
 			baseConfigurationReference = C51A9D80952C11BCA87E6CFC /* Pods-SentryIssueRepo.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
